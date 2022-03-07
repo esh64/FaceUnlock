@@ -1,0 +1,5 @@
+sudo docker run --name database -v /home/fourier/faceRecognition/DatabaseFiles/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=faceUnlock2021 -d mysql
+ 
+sudo docker inspect database | grep IPAddress
+ 
+sudo docker exec -it database mysql -pfaceUnlock2021

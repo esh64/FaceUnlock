@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS nodelogin DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE nodelogin;
+
+CREATE TABLE IF NOT EXISTS accounts(
+    id int(11) NOT NULL,
+    username varchar(50) NOT NULL,
+    password varchar(100) NOT NULL
+);
+
+INSERT INTO accounts (id, username, password) VALUES (1, 'admin', 'admin2021');
+
+ALTER TABLE accounts ADD PRIMARY KEY (id);
+ALTER TABLE accounts MODIFY id int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'faceUnlock2021';
+
+flush privileges;

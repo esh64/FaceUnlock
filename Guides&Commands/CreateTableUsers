@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS gateUsersDatabase DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE gateUsersDatabase;
+
+CREATE TABLE IF NOT EXISTS gateUsers(
+    id int(11) NOT NULL,
+    name varchar(50) NOT NULL,
+    picture varchar(50) NOT NULL,
+    useTime varchar(50) NOT NULL,
+    encodedPicture varchar(3200) NOT NULL
+);
+
+ALTER TABLE gateUsers ADD PRIMARY KEY (id);
+ALTER TABLE gateUsers MODIFY id int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;

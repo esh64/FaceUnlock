@@ -1,0 +1,1 @@
+sudo docker run -d -v /home/fourier/faceRecognition/FTPServerFiles/:/home/vsfpd -p 20:20 -p 21:21 -p 47400-47470:47400-47470 -e FTP_USER=FTPUser -e FTP_PASS=faceUnlock2021  -e PASV_ADDRESS=192.168.0.12 --name ftp --restart=always bogem/ftp

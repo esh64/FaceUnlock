@@ -1,0 +1,11 @@
+Para criar o webserver é necessário estar na pasta /WebServer e utilizar os comandos do docker:
+
+# cria a imagem do webserver no docker
+docker build -t webserverimage .
+
+# cria o container do webserver a partir da imagem criada anteriormente. URL para acessar: http://localhost:3000/
+# linka um volume do WorkDir do container com o diretório de execução do comando
+docker run -p 3000:3000 --name webserver --volume  ${PWD}:/usr/src/app webserverimage
+
+# Victor
+docker run -p 3000:3000 --name webserver --volume  C:\Users\Victor\Desktop\Estudo-PLE\PI\faceRecognition\WebServer:/usr/src/app webserverimage
